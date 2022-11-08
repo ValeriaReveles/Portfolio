@@ -1,0 +1,16 @@
+/*css transitions for scroll animations*/
+.hidden{
+    opacity: 0;
+    transition: all 1s;
+}
+
+@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+}
+
+
+.show{
+    opacity: 1;
+}
