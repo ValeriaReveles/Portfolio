@@ -1,6 +1,6 @@
-# Welcome to my Portfolio (work in progress)!
+# Welcome to my Web Portfolio (under construction)!
 
-I am a full stack web developer based in San Antonio, Texas with a passion for bringing people's visions to life via code!
+I am a full stack web developer based in San Antonio, Texas with a passion for bringing people's ideas to life via code!
 
 I like to combing clean and efficient code with creative UI/UX designs in order to deliver intuitive, secure, and innovative experiences to clients. 
 
