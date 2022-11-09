@@ -7,4 +7,4 @@ I like to combine clean and efficient code with simple yet creative UI/UX design
 Check out the live site here: [Portfolio](valeriareveles.github.io)
 
 
-# Portfolio
+# ValeriaReveles.github.io
