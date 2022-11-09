@@ -5,13 +5,11 @@
     --ff-primary: 'Bebas Neue', sans-serif;
     --ff-accent: 'Roboto', sans-serif;
 }
-
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-
 body{
     background-color: black;
     color: white;
@@ -20,7 +18,6 @@ body{
     font-size: 1.35rem;
     line-height: 1.6;
 }
-
 header{
     display: grid;
     text-align: center;
@@ -29,36 +26,7 @@ header{
     font-size: 4rem;
 }
 
-section{
-    display: grid;
-    place-items: center;
-    align-content: center;
-    min-height: 100vh;
-}
-/*transitions for scroll animation effects*/
-.hidden{
-    opacity: 0;
-    filter: blur(2rem);
-    transform: translateX(-100%);
-    transition: all 1s;
-}
-
-
-
-@media(prefers-reduced-motion){
-    .hidden{
-        transition: none;
-    }
-}
-
-.show{
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-}
-
 /*Styling for "scroll down" icon:*/
-
 #scroll-down-animation {
     position: relative;
     top: 100%;
@@ -66,7 +34,6 @@ section{
     transform: translate(-50%,-50%);
     margin-top: 2rem;
 }
-
 h2 {
     color: #fff;
     /*font-family: var(--ff-accent);*/
@@ -74,7 +41,6 @@ h2 {
     font-size: 1rem;
     margin: 0.8rem;
 }
-
 .mouse {
     margin: 0 auto;
     display: block;
@@ -84,7 +50,6 @@ h2 {
     width: 3.125rem;
     position: relative;
 }
-
 .move {
     position: absolute;
     background-color: #fff;
@@ -95,7 +60,6 @@ h2 {
     transform: translateX(-50%);
     animation: move 2s linear infinite;
 }
-
 @keyframes move {
     0% {
         transform: translate(-50%,0.625rem);
@@ -111,7 +75,62 @@ h2 {
     }
 }
 
+/*styling for sections/scroll into view effect*/
+section{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+h1{
+    margin: 1rem;
+}
+/*transitions for scroll animation effects*/
+.hidden{
+    opacity: 0;
+    filter: blur(2rem);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
 
+.skills{
+    align-content: center;
+    margin: 0.5rem;
+    padding: 0;
+}
+
+
+.skills ul li {
+    border: 0.1rem solid #fff;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 0.75rem;
+    margin: 0 0.4rem 0.4rem 0;
+    padding: 0.4rem;
+    letter-spacing: 0.1rem;
+}
+
+.skills ul li:hover {
+    color: #C8FCEA;
+    border: 0.1rem solid #C8FCEA;
+}
+
+
+
+/*styling for connect footer section*/
+footer h1{
+    margin:0.3rem;
+}
 .connect-icons {
     display: flex;
     position: relative;
