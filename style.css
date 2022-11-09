@@ -18,7 +18,7 @@ body{
     font-family: var(--ff-primary);
     font-weight: 400;
     font-size: 1.35rem;
-    /*line-height: 1.6;*/
+    line-height: 1.6;
 }
 
 header{
@@ -43,6 +43,14 @@ section{
     transition: all 1s;
 }
 
+
+
+@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+}
+
 .show{
     opacity: 1;
     filter: blur(0);
@@ -53,7 +61,7 @@ section{
 
 #scroll-down-animation {
     position: relative;
-    top: 50%;
+    top: 100%;
     left: 50%;
     transform: translate(-50%,-50%);
     margin-top: 2rem;
@@ -64,7 +72,7 @@ h2 {
     font-family: var(--ff-accent);
     font-weight: 200;
     font-size: 1rem;
-    margin: 0.5rem;
+    margin: 0.8rem;
 }
 
 .mouse {
@@ -101,4 +109,29 @@ h2 {
         transform: translate(-50%,5rem);
         opacity: 0;
     }
+}
+
+
+.connect-icons {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    font-family: var(--ff-accent);
+    font-size: 2.5rem;
+}
+.connect-icons i{
+    color: white;
+    margin: 0.8rem;
+    padding: 1rem;
+}
+i:hover{
+    color: #C8FCEA;
+}
+
+.icon:nth-child(2){
+    transition-delay: 200ms;
+}
+
+.icon:nth-child(3){
+    transition-delay: 400ms;
 }
