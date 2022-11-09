@@ -1,16 +1,104 @@
-/*css transitions for scroll animations*/
+/*General styling:*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root{
+    --ff-primary: 'Bebas Neue', sans-serif;
+    --ff-accent: 'Roboto', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: var(--ff-primary);
+    font-weight: 400;
+    font-size: 1.35rem;
+    /*line-height: 1.6;*/
+}
+
+header{
+    display: grid;
+    text-align: center;
+    align-content: center;
+    min-height: 100vh;
+    font-size: 4rem;
+}
+
+section{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+/*transitions for scroll animation effects*/
 .hidden{
     opacity: 0;
+    filter: blur(2rem);
+    transform: translateX(-100%);
     transition: all 1s;
 }
 
-@media(prefers-reduced-motion){
-    .hidden{
-        transition: none;
-    }
-}
-
-
 .show{
     opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+/*Styling for "scroll down" icon:*/
+
+#scroll-down-animation {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-top: 2rem;
+}
+
+h2 {
+    color: #fff;
+    font-family: var(--ff-accent);
+    font-weight: 200;
+    font-size: 1rem;
+    margin: 0.5rem;
+}
+
+.mouse {
+    margin: 0 auto;
+    display: block;
+    border-radius: 50px;
+    border: 2px solid #fff;
+    height: 5.5rem;
+    width: 3.125rem;
+    position: relative;
+}
+
+.move {
+    position: absolute;
+    background-color: #fff;
+    height: 0.625rem;
+    width: 0.625rem;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: move 2s linear infinite;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(-50%,0.625rem);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-50%,2.5rem);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%,5rem);
+        opacity: 0;
+    }
 }
