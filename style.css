@@ -19,6 +19,7 @@ body{
     font-weight: 400;
     font-size: 1.5rem;
     line-height: 1.6;
+    letter-spacing: 0.1rem;
 }
 header{
     display: grid;
@@ -29,7 +30,14 @@ header{
 }
 h1{
     font-size: 5rem;
+    margin: 1rem 0 1rem 0;
+
 }
+h3{
+    margin: 0.5rem;
+}
+
+
 .soft {
     border-radius: 1.5rem;
     box-shadow: -0.13rem -0.13rem 0.4rem 0 rgba(255,255, 255, 0.3),
@@ -88,7 +96,7 @@ h1{
 }
 
 /*styling for sections/scroll into view effect*/
-section{
+section, footer{
     display: grid;
     place-items: center;
     align-content: center;
@@ -113,30 +121,45 @@ section{
     transform: translateX(0);
 }
 
+.about p{
+    margin: 2rem 0 2rem 0;
+}
+
+
+
 .skills ul{
-    /*align-content: center;*/
-    margin: 0;
-    padding: 1rem;
+    margin: 1rem;
+    padding: 0;
 }
 
 
 .skills ul li {
     list-style: none;
-    border: 0.1rem solid #fff;
-    border-radius: 2px;
+    border-radius: 1.5rem;
+    box-shadow: -0.13rem -0.13rem 0.4rem 0 rgba(255,255, 255, 0.3),
+    -0.13rem -0.13rem 0.6rem 0 rgba(0, 0, 0, 0.9);
     display: inline-block;
-    font-size: 0.75rem;
-    margin: 0 0.4rem 0.4rem 0;
-    padding: 0.4rem;
+    font-size: 1rem;
+    margin: 0.5rem;
+    padding: 0.8rem;
     letter-spacing: 0.1rem;
 }
 
 .skills ul li:hover {
     color: #C8FCEA;
-    border: 0.1rem solid #C8FCEA;
+    /*border: 0.1rem solid #C8FCEA;*/
+}
+
+.projects{
+    margin: 1.5rem;
 }
 
 /*project card styling*/
+.projects p{
+    font-size: 1.25rem;
+    font-family: var(--ff-accent);
+}
+
 .projects:nth-child(2){
     transition-delay: 200ms;
 }
@@ -148,6 +171,8 @@ section{
 
 
 /*styling for connect footer section*/
+
+
 footer h1{
     margin:0.3rem;
 }
@@ -179,4 +204,8 @@ i:hover{
 
 .icon:nth-child(3){
     transition-delay: 400ms;
+}
+
+.icon:nth-child(4){
+    transition-delay: 600ms;
 }
