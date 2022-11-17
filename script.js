@@ -1,7 +1,6 @@
-//Function to get "Hello, World!" in different languages:
+//Functions to get "Hello, World!" in different languages:
 
-const title = document.querySelector('h1');
-// const code = document.querySelector('code');
+const helloTitle = document.querySelector('h1');
 
 const languages = {
     spanish: 'hola mundo!',
@@ -21,26 +20,23 @@ const languages = {
     romanian: 'salut Lume!',
     indonesian: 'halo Dunia!',
     lithuanian: 'labas pasauli!',
-    // english: 'hello world!',
 };
 
 const entries = Object.entries(languages);
-let count = entries.length -1;
+let countLanguage = entries.length -1;
 const changeCountry = () => {
-    if (count === entries.length) {
-        count = 0;
+    if (countLanguage === entries.length) {
+        countLanguage = 0;
     } else {
-        title.textContent = entries[count][1];
+        helloTitle.textContent = entries[countLanguage][1];
         // code.textContent = entries[count][1];
-        count += 1;
+        countLanguage += 1;
     }
 };
 setInterval(changeCountry, 1500);
 
 
-
-
-//Scroll effect functionality:
+//Scroll into view effect functionality:
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) =>{
         console.log(entry);
